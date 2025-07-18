@@ -1,34 +1,34 @@
 <template>
-  <div class="aside-container">
+<div class="aside-container">
     <h5>导航菜单</h5>
     <el-menu
-      :default-active="$route.path"
-      class="el-menu-vertical-demo"
-      router
-      @open="handleOpen"
-      @close="handleClose">
-      <el-submenu index="1">
-        <template #title>
-          <el-icon><Location /></el-icon>
-        </template>
-        <el-menu-item-group>
-          <!-- 添加路由链接 -->
-          <el-menu-item index="/">
-            <el-icon><House /></el-icon>
-            <span>欢迎页面</span>
-          </el-menu-item>
-          <el-menu-item index="/userinfo">
-            <el-icon><User /></el-icon>
-            <span>用户信息</span>
-          </el-menu-item>
-          <el-menu-item index="/orders">
-            <el-icon><Document /></el-icon>
-            <span>订单管理</span>
-          </el-menu-item>
-        </el-menu-item-group>
-      </el-submenu>
+        :default-active="$route.path"
+        class="el-menu-vertical-demo"
+        router
+        @open="handleOpen"
+        @close="handleClose">
+        <el-submenu index="1">
+            <template #title>
+                <el-icon><Location /></el-icon>
+            </template>
+            <el-menu-item-group>
+                <!-- 添加路由链接 -->
+                <el-menu-item index="/">
+                    <el-icon><House /></el-icon>
+                    <span>欢迎页面</span>
+                </el-menu-item>
+                <el-menu-item index="/userinfo">
+                    <el-icon><User /></el-icon>
+                    <span>用户信息</span>
+                </el-menu-item>
+                <el-menu-item index="/orders">
+                    <el-icon><Document /></el-icon>
+                    <span>订单管理</span>
+                </el-menu-item>
+            </el-menu-item-group>
+        </el-submenu>
     </el-menu>
-  </div>
+</div>
 </template>
 
 <script>

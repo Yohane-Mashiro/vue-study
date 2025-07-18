@@ -1,5 +1,10 @@
 <template>
-  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+  <el-menu 
+  :default-active="$route.path" 
+  class="el-menu-demo" 
+  mode="horizontal" 
+  router
+  @select="handleSelect">
     <el-menu-item index="1">处理中心</el-menu-item>
     <el-sub-menu index="2">
       <template #title>我的工作台</template>
@@ -13,10 +18,7 @@
         <el-menu-item index="2-4-3">选项3</el-menu-item>
       </el-sub-menu>
     </el-sub-menu>
-    <el-menu-item index="3" disabled>消息中心</el-menu-item>
-    <el-menu-item index="4">
-      <a href="https://www.ele.me" target="_blank">订单管理</a>
-    </el-menu-item>
+    <el-menu-item index="/contact">联系我们</el-menu-item>
   </el-menu>
 </template>
 

@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 // 导入页面组件
-import Main from '../components/views/Welcome.vue'
-import UserInfo from '../components/views/UserInfo.vue'
+import Main from '../views/Welcome.vue'
+import UserInfo from '../views/UserInfo.vue'
 import Orders from '@/views/Orders.vue'
-
+import Contact from '@/views/Contact.vue'
 const routes = [
   {
     path: '/',
@@ -18,6 +18,10 @@ const routes = [
     path: '/orders',
     name: 'Orders',
     component: Orders
+  },{
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
   }
 ]
 
