@@ -10,10 +10,8 @@
       <el-submenu index="1">
         <template #title>
           <el-icon><Location /></el-icon>
-          <span>导航一</span>
         </template>
         <el-menu-item-group>
-          <template #title>分组一</template>
           <!-- 添加路由链接 -->
           <el-menu-item index="/">
             <el-icon><House /></el-icon>
