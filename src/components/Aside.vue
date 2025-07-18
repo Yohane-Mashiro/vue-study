@@ -1,55 +1,57 @@
 <template>
   <div class="aside-container">
-    <h5>默认颜色</h5>
+    <h5>导航菜单</h5>
     <el-menu
-      default-active="2"
+      :default-active="$route.path"
       class="el-menu-vertical-demo"
+      router
       @open="handleOpen"
       @close="handleClose">
       <el-submenu index="1">
-        <template slot="title">
-          <i class="el-icon-location"></i>
+        <template #title>
+          <el-icon><Location /></el-icon>
           <span>导航一</span>
         </template>
         <el-menu-item-group>
-          <template slot="title">分组一</template>
-          <el-menu-item index="1-1">选项1</el-menu-item>
-          <el-menu-item index="1-2">选项2</el-menu-item>
+          <template #title>分组一</template>
+          <!-- 添加路由链接 -->
+          <el-menu-item index="/">
+            <el-icon><House /></el-icon>
+            <span>欢迎页面</span>
+          </el-menu-item>
+          <el-menu-item index="/userinfo">
+            <el-icon><User /></el-icon>
+            <span>用户信息</span>
+          </el-menu-item>
+          <el-menu-item index="/orders">
+            <el-icon><Document /></el-icon>
+            <span>订单管理</span>
+          </el-menu-item>
         </el-menu-item-group>
-        <el-menu-item-group title="分组2">
-          <el-menu-item index="1-3">选项3</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-          <template slot="title">选项4</template>
-          <el-menu-item index="1-4-1">选项1</el-menu-item>
-        </el-submenu>
       </el-submenu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
-      </el-menu-item>
-      <el-menu-item index="3" disabled>
-        <i class="el-icon-document"></i>
-        <span slot="title">导航三</span>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <i class="el-icon-setting"></i>
-        <span slot="title">导航四</span>
-      </el-menu-item>
     </el-menu>
   </div>
 </template>
+
 <script>
-  export default {
-    methods: {
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        console.log(key, keyPath);
-      }
+import { Location, House, User, Document } from '@element-plus/icons-vue'
+
+export default {
+  components: {
+    Location,
+    House,
+    User,
+    Document
+  },
+  methods: {
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    handleClose(key, keyPath) {
+      console.log(key, keyPath);
     }
   }
+}
 </script>
 
 <style scoped>
@@ -67,5 +69,15 @@ h5 {
   text-align: center;
   margin: 10px 0;
   color: #666;
+}
+
+/* 添加菜单项样式 */
+.el-menu-item {
+  display: flex;
+  align-items: center;
+}
+
+.el-menu-item .el-icon {
+  margin-right: 8px;
 }
 </style>

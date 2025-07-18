@@ -1,13 +1,11 @@
 <script>
 import Header from './components/Header.vue'
-import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
 import Aside from './components/Aside.vue'
-// 这里是注册
+// 移除 Main 组件的导入，因为它现在通过路由管理
 export default {
   components: {
     Header,
-    Main,
     Footer,
     Aside
   }
@@ -25,7 +23,8 @@ export default {
     </el-aside>
     <el-container>
       <el-main>
-        <Main />
+        <!-- 替换 Main 组件为 router-view -->
+        <router-view />
       </el-main>
       <el-footer>
         <Footer />
