@@ -1,13 +1,35 @@
-
+<script>
+import Header from './components/Header.vue'
+import Main from './components/Main.vue'
+import Footer from './components/Footer.vue'
+import Aside from './components/Aside.vue'
+// 这里是注册
+export default {
+  components: {
+    Header,
+    Main,
+    Footer,
+    Aside
+  }
+}
+</script>
 
 <template>
   <el-container>
-  <el-header>Header</el-header>
+  <el-header>
+    <Header />
+  </el-header>
   <el-container>
-    <el-aside width="200px">Aside</el-aside>
+    <el-aside width="200px">
+      <Aside />
+    </el-aside>
     <el-container>
-      <el-main>Main</el-main>
-      <el-footer>Footer</el-footer>
+      <el-main>
+        <Main />
+      </el-main>
+      <el-footer>
+        <Footer />
+      </el-footer>
     </el-container>
   </el-container>
 </el-container>
