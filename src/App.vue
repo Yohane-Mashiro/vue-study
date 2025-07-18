@@ -47,6 +47,11 @@ export default {
   .el-container:first-child {
     width: 100vw;
     height: 100vh;
+    border: 3px solid #409EFF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   .el-header, .el-footer {
@@ -55,6 +60,8 @@ export default {
     text-align: center;
     line-height: 60px;
     height: 60px;
+    border: 2px solid #409EFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .el-aside {
@@ -64,6 +71,10 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid #409EFF;
+    border-top: none;
+    border-bottom: none;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
   }
   
   .el-main {
@@ -73,5 +84,9 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid #409EFF;
+    border-left: none;
+    border-bottom: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 </style>
